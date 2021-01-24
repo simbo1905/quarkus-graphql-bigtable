@@ -1,9 +1,15 @@
 # Quarkus GraphQL BigTable
 
-This is a port port of [spring-bigquery-graphql](https://github.com/simbo1905/spring-bigquery-graphql) onto Quarkus with GraalVM 
-Native Image support. See below for how to compile and run the native image using Docker. 
+This is a port port of [spring-bigquery-graphql](https://github.com/simbo1905/spring-bigquery-graphql) 
+onto Quarkus with GraalVM Native Image support. See below for how to compile and run the native image 
+using Docker. 
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
+
+Note that the original project has a GitHub action to build it and instructions on running the app with KNative 
+which has not been ported over to this repo. Personally I would use this GraalVM native-image ready Quarkus code
+with KNative. Quarkus is based on Vert.x and this version on of the code is more scalable as it doesn't block a thread 
+waiting for BigQuery. 
 
 ## Bigtable Setup
 
